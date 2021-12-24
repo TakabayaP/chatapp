@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'dart:convert';
+import 'package:chatapp/widget/chatBubble.dart';
 
 void main() {
   runApp(const MyApp());
@@ -83,30 +84,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       shrinkWrap: true,
                       padding: const EdgeInsets.only(top: 10, bottom: 55),
                       itemBuilder: (BuildContext context, index) {
-                        return Column(children: [
-                          Align(
-                              alignment: Alignment.topLeft,
-                              child: Container(
-                                  padding: const EdgeInsets.all(16),
-                                  margin: const EdgeInsets.all(10),
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(20),
-                                    color: Colors.blue[200],
-                                  ),
-                                  child:
-                                      Text(snapshot.data![index]['content']))),
-                          Align(
-                              alignment: Alignment.topLeft,
-                              child: Container(
-                                  margin: const EdgeInsets.only(left: 20),
-                                  child: Text(
-                                      "id:" +
-                                          snapshot.data![index]['user_id']
-                                              .toString(),
-                                      style: const TextStyle(
-                                        fontSize: 13,
-                                      ))))
-                        ]);
+                        return chatBubble(snapshot.data![index]['content'],
+                            snapshot.data![index]['user_id']);
                       });
                 } else {
                   return const Center(
@@ -135,7 +114,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     onPressed: () {
                       _sendTextField(inputField.text);
                     },
-                    child: Icon(Icons.send, color: Colors.white, size: 18),
+                    child:
+                        const Icon(Icons.send, color: Colors.white, size: 18),
                     backgroundColor: Colors.blue,
                   )
                 ],
