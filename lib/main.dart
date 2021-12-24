@@ -1,8 +1,8 @@
+import 'package:chatapp/view/chat/chatList.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:async';
 import 'dart:convert';
-import 'package:chatapp/widget/chatBubble.dart';
 
 void main() {
   runApp(const MyApp());
@@ -79,14 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: StreamBuilder<List>(
               builder: (BuildContext context, AsyncSnapshot<List> snapshot) {
                 if (snapshot.hasData) {
-                  return ListView.builder(
-                      itemCount: snapshot.data!.length,
-                      shrinkWrap: true,
-                      padding: const EdgeInsets.only(top: 10, bottom: 55),
-                      itemBuilder: (BuildContext context, index) {
-                        return chatBubble(snapshot.data![index]['content'],
-                            snapshot.data![index]['user_id']);
-                      });
+                  return chatList(snapshot.data);
                 } else {
                   return const Center(
                     child: CircularProgressIndicator(),
