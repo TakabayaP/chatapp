@@ -75,20 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Stack(
         children: <Widget>[
-          SingleChildScrollView(
-            child: StreamBuilder<List>(
-              builder: (BuildContext context, AsyncSnapshot<List> snapshot) {
-                if (snapshot.hasData) {
-                  return chatList(snapshot.data);
-                } else {
-                  return const Center(
-                    child: CircularProgressIndicator(),
-                  );
-                }
-              },
-              stream: posts.stream,
-            ),
-          ),
+          chatList(posts),
           Align(
               alignment: Alignment.bottomLeft,
               child: Row(
@@ -122,4 +109,27 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
     );
   }
+}
+
+Widget chatBubble(String body, int id) {
+  return Column(children: [
+    Align(
+        alignment: Alignment.topLeft,
+        child: Container(
+            padding: const EdgeInsets.all(16),
+            margin: const EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(20),
+              color: Colors.blue[200],
+            ),
+            child: Text(body))),
+    Align(
+        alignment: Alignment.topLeft,
+        child: Container(
+            margin: const EdgeInsets.only(left: 20),
+            child: Text("id:" + id.toString(),
+                style: const TextStyle(
+                  fontSize: 13,
+                ))))
+  ]);
 }
