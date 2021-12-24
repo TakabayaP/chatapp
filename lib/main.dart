@@ -1,8 +1,7 @@
 import 'package:chatapp/view/chat/chatList.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 import 'dart:async';
-import 'dart:convert';
+import 'package:chatapp/model/communication.dart' as comm;
 
 void main() {
   runApp(const MyApp());
@@ -32,39 +31,16 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final TextEditingController inputField = TextEditingController();
   StreamController<List> posts = StreamController<List>();
-  Future<List<dynamic>> _getPosts() async {
-    List data = [];
-    var url = Uri.http('127.0.0.1:8080', "/post");
-    var response = await http.get(url);
-    if (response.statusCode == 200) {
-      print(json.decode(utf8.decode(response.bodyBytes)));
-      data = json.decode(utf8.decode(response.bodyBytes));
-    }
-    posts.add(data);
-    return data;
-  }
-
-  Future<void> _postPosts(String body) async {
-    await http.post(
-      Uri.http('127.0.0.1:8080', '/post'),
-      headers: {"Content-Type": "application/json"},
-      body: '{"content":"$body","user_id":5}',
-    );
-  }
 
   @override
   void initState() {
-    _getPosts();
+    comm.getPosts(posts);
     super.initState();
   }
 
-  void _sendTextField(String text) {
-    if (inputField.text != "") {
-      _postPosts(text);
-      inputField.clear();
-    }
+  _getPosts() {
+    comm.getPosts(posts);
   }
 
   @override
@@ -76,30 +52,6 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Stack(
         children: <Widget>[
           chatList(posts),
-          Align(
-              alignment: Alignment.bottomLeft,
-              child: Row(
-                children: [
-                  Expanded(
-                      child: TextField(
-                    controller: inputField,
-                    decoration: const InputDecoration(
-                        hintText: "Type message...",
-                        border: InputBorder.none,
-                        fillColor: Colors.white,
-                        filled: true),
-                    onSubmitted: _sendTextField,
-                  )),
-                  FloatingActionButton(
-                    onPressed: () {
-                      _sendTextField(inputField.text);
-                    },
-                    child:
-                        const Icon(Icons.send, color: Colors.white, size: 18),
-                    backgroundColor: Colors.blue,
-                  )
-                ],
-              ))
         ],
       ),
       floatingActionButton: FloatingActionButton(
