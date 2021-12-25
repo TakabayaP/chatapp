@@ -1,4 +1,5 @@
-import 'package:chatapp/view/chat/chatList.dart';
+import 'package:chatapp/view/chat/chat_list.dart';
+import 'package:chatapp/widget/chat_text_field.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:chatapp/model/communication.dart' as comm;
@@ -50,9 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Stack(
-        children: <Widget>[
-          chatList(posts),
-        ],
+        children: <Widget>[ChatList(stream: posts.stream), ChatTextField()],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _getPosts,
