@@ -1,33 +1,20 @@
-import 'dart:async';
 import 'package:chatapp/widget/chat_bubble.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class ChatList extends StatelessWidget {
-  const ChatList({Key? key, required this.stream}) : super(key: key);
-  final Stream<List> stream;
+  const ChatList({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      child: StreamBuilder<List>(
-        builder: (BuildContext context, AsyncSnapshot<List> snapshot) {
-          if (snapshot.hasData) {
-            return ListView.builder(
-                itemCount: snapshot.data!.length,
-                shrinkWrap: true,
-                padding: const EdgeInsets.only(top: 10, bottom: 55),
-                itemBuilder: (BuildContext context, index) {
-                  return ChatBubble(
-                      body: snapshot.data![index]['content'],
-                      id: snapshot.data![index]['user_id']);
-                });
-          } else {
-            return const Center(
-              child: CircularProgressIndicator(),
-            );
-          }
-        },
-        stream: stream,
-      ),
-    );
+        child: ListView.builder(
+            itemCount: Provider.of<List>(context).length,
+            shrinkWrap: true,
+            padding: const EdgeInsets.only(top: 10, bottom: 55),
+            itemBuilder: (BuildContext context, index) {
+              return ChatBubble(
+                  body: Provider.of<List>(context)[index]['content'],
+                  id: Provider.of<List>(context)[index]['user_id']);
+            }));
   }
 }

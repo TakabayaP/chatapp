@@ -3,6 +3,7 @@ import 'package:chatapp/widget/chat_text_field.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:chatapp/model/communication.dart' as comm;
+import 'package:provider/provider.dart';
 
 class ChatPage extends StatefulWidget {
   const ChatPage({Key? key, required this.title}) : super(key: key);
@@ -31,9 +32,12 @@ class _ChatPageState extends State<ChatPage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Stack(
-        children: <Widget>[ChatList(stream: posts.stream), ChatTextField()],
-      ),
+      body: StreamProvider<List>(
+          create: (_) => posts.stream,
+          initialData: const [],
+          child: Stack(
+            children: <Widget>[ChatList(), ChatTextField()],
+          )),
       floatingActionButton: FloatingActionButton(
         onPressed: _getPosts,
         child: const Icon(Icons.replay_outlined),
