@@ -10,6 +10,7 @@ class ChatList extends StatelessWidget {
         child: ListView.builder(
             itemCount: Provider.of<List>(context).length,
             shrinkWrap: true,
+            reverse: true,
             padding: const EdgeInsets.only(top: 10, bottom: 55),
             itemBuilder: (BuildContext context, index) {
               return ChatBubble(
