@@ -1,21 +1,25 @@
+import 'package:chatapp/view/chat/chat_page.dart';
+import 'package:chatapp/viewmodel/chat_view_model.dart';
 import 'package:chatapp/widget/chat_bubble.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class ChatList extends StatelessWidget {
+class ChatList extends HookConsumerWidget {
   const ChatList({Key? key}) : super(key: key);
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final chat = ref.watch(chatViewModelProvider);
+
     return SingleChildScrollView(
         child: ListView.builder(
-            itemCount: Provider.of<List>(context).length,
+            itemCount: chat.posts.length,
             shrinkWrap: true,
             reverse: true,
             padding: const EdgeInsets.only(top: 10, bottom: 55),
             itemBuilder: (BuildContext context, index) {
               return ChatBubble(
-                  body: Provider.of<List>(context)[index]['content'],
-                  id: Provider.of<List>(context)[index]['user_id']);
+                  body: chat.posts[index]['content'].toString(),
+                  id: chat.posts[index]['user_id'] as int);
             }));
   }
 }
