@@ -3,6 +3,7 @@ import 'package:chatapp/viewmodel/chat_view_model.dart';
 import 'package:chatapp/widget/chat_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:chatapp/model/communication.dart' as comm;
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class ChatPage extends HookConsumerWidget {
@@ -10,6 +11,7 @@ class ChatPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    useFuture(useMemoized(() => ref.watch(chatViewModelProvider).getPosts()));
     return Scaffold(
       appBar: AppBar(
         title: const Text("Flutter + Go Chatapp"),
