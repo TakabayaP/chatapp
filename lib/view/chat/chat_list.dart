@@ -1,4 +1,3 @@
-import 'package:chatapp/view/chat/chat_page.dart';
 import 'package:chatapp/viewmodel/chat_view_model.dart';
 import 'package:chatapp/widget/chat_bubble.dart';
 import 'package:flutter/material.dart';
