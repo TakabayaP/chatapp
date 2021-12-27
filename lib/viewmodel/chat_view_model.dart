@@ -3,8 +3,8 @@ import 'package:flutter/foundation.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:chatapp/repository/chat_repository.dart';
 
-final chatViewModelProvider =
-    Provider((ref) => ChatViewModel(ref.watch(chatRepositoryProvider)));
+final chatViewModelProvider = ChangeNotifierProvider(
+    (ref) => ChatViewModel(ref.watch(chatRepositoryProvider)));
 
 class ChatViewModel extends ChangeNotifier {
   ChatViewModel(this._repository);
