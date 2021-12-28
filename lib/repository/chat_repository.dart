@@ -1,9 +1,6 @@
-import 'package:chatapp/repository/chat_repository_http.dart';
-import "package:hooks_riverpod/hooks_riverpod.dart";
-
-final chatRepositoryProvider =
-    Provider<ChatRepository>((ref) => ChatRepositoryHttp());
+import 'package:chatapp/model/chat_model.dart';
 
 abstract class ChatRepository {
-  Future<List> getPosts();
+  Future<void> postChats(String body);
+  Future<List<Chat>> getChats();
 }
