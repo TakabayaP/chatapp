@@ -1,4 +1,3 @@
-import 'package:chatapp/provider/chat_repository_provider.dart';
 import 'package:flutter/foundation.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:chatapp/repository/chat_repository.dart';
