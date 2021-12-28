@@ -1,21 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+
 import 'package:chatapp/view/chat/chat_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends HookConsumerWidget {
   const MyApp({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp(
       title: 'Flutter + Go chatapp',
       theme: ThemeData(
         primarySwatch: Colors.purple,
       ),
-      home: const ChatPage(title: 'Flutter + Go chatapp'),
+      home: const ChatPage(),
     );
   }
 }

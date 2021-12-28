@@ -1,33 +1,24 @@
-import 'dart:async';
-import 'package:chatapp/widget/chat_bubble.dart';
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class ChatList extends StatelessWidget {
-  const ChatList({Key? key, required this.stream}) : super(key: key);
-  final Stream<List> stream;
+import 'package:chatapp/viewmodel/chat_view_model.dart';
+import 'package:chatapp/view/chat/chat_bubble.dart';
+
+class ChatList extends HookConsumerWidget {
+  const ChatList({Key? key}) : super(key: key);
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final chat = ref.watch(chatViewModelProvider);
+
     return SingleChildScrollView(
-      child: StreamBuilder<List>(
-        builder: (BuildContext context, AsyncSnapshot<List> snapshot) {
-          if (snapshot.hasData) {
-            return ListView.builder(
-                itemCount: snapshot.data!.length,
-                shrinkWrap: true,
-                padding: const EdgeInsets.only(top: 10, bottom: 55),
-                itemBuilder: (BuildContext context, index) {
-                  return ChatBubble(
-                      body: snapshot.data![index]['content'],
-                      id: snapshot.data![index]['user_id']);
-                });
-          } else {
-            return const Center(
-              child: CircularProgressIndicator(),
-            );
-          }
-        },
-        stream: stream,
-      ),
-    );
+        child: ListView.builder(
+            itemCount: chat.chats.length,
+            shrinkWrap: true,
+            reverse: true,
+            padding: const EdgeInsets.only(top: 10, bottom: 55),
+            itemBuilder: (BuildContext context, index) {
+              return ChatBubble(
+                  body: chat.chats[index].body, id: chat.chats[index].userId);
+            }));
   }
 }
