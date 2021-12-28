@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:chatapp/view/chat/chat_page.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+import 'package:chatapp/view/chat/chat_page.dart';
 
 void main() {
   runApp(const ProviderScope(child: MyApp()));
@@ -16,7 +17,7 @@ class MyApp extends HookConsumerWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple,
       ),
-      home: ChatPage(),
+      home: const ChatPage(),
     );
   }
 }
