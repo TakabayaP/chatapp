@@ -1,166 +1,166 @@
-<mxfile host="app.diagrams.net" modified="2021-12-28T10:44:49.857Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.113 Safari/537.36" etag="pAJAn2Y8ARvLZn3XqTLN" version="16.1.0" type="github">
-  <diagram name="Page-1" id="10a91c8b-09ff-31b1-d368-03940ed4cc9e">
-    <mxGraphModel dx="1024" dy="1376" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-54" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
-          <mxGeometry x="435" y="490" width="250" height="205" as="geometry" />
-        </mxCell>
-        <mxCell id="62893188c0fa7362-1" value="MyApp" style="whiteSpace=wrap;html=1;rounded=1;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
-          <mxGeometry x="500" y="40" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;comic=0;orthogonalLoop=1;jettySize=auto;html=1;labelBorderColor=none;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" target="62893188c0fa7362-2" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="610" y="360" as="targetPoint" />
-            <mxPoint x="530" y="360" as="sourcePoint" />
-            <Array as="points">
-              <mxPoint x="560" y="360" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="62893188c0fa7362-2" value="&lt;span&gt;ChatPage&lt;br&gt;[view]&lt;br&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;verticalAlign=top;" parent="1" vertex="1">
-          <mxGeometry x="500" y="150" width="120" height="180" as="geometry" />
-        </mxCell>
-        <mxCell id="62893188c0fa7362-5" value="" style="rounded=0;html=1;labelBackgroundColor=none;startArrow=none;startFill=0;startSize=5;endArrow=none;endFill=0;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=12" parent="1" source="62893188c0fa7362-1" target="62893188c0fa7362-2" edge="1">
-          <mxGeometry x="-0.359" y="-11" relative="1" as="geometry">
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="62893188c0fa7362-8" value="&lt;span&gt;ChatViewModel&lt;br&gt;[viewmodel]&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
-          <mxGeometry x="500" y="390" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-12" value="" style="endArrow=classic;html=1;rounded=0;labelBorderColor=none;comic=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" parent="1" source="62893188c0fa7362-2" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="570" y="340" as="sourcePoint" />
-            <mxPoint x="530" y="390" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-13" value="Watch&amp;amp;&lt;br&gt;apply changes" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="xEOuOQlPAfz4LEN3EPyu-12" connectable="0" vertex="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-45" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-16" value="&lt;span&gt;ChatRepository: ChatRepositoryImpl&lt;br&gt;[repository]&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
-          <mxGeometry x="500" y="505" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-24" value="" style="endArrow=classic;html=1;rounded=0;labelBorderColor=none;comic=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" parent="1" source="xEOuOQlPAfz4LEN3EPyu-16" target="62893188c0fa7362-8" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="580" y="490" as="sourcePoint" />
-            <mxPoint x="680" y="490" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-25" value="Get chats[chats]" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="xEOuOQlPAfz4LEN3EPyu-24" connectable="0" vertex="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="50" y="2" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-26" value="" style="endArrow=classic;html=1;rounded=0;labelBorderColor=none;comic=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="62893188c0fa7362-8" target="xEOuOQlPAfz4LEN3EPyu-16" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="530" y="470" as="sourcePoint" />
-            <mxPoint x="630" y="470" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-27" value="Post chats[chats]" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="xEOuOQlPAfz4LEN3EPyu-26" connectable="0" vertex="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-50" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-28" value="" style="endArrow=classic;html=1;rounded=0;labelBorderColor=none;comic=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="62893188c0fa7362-2" target="62893188c0fa7362-8" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="600" y="350" as="sourcePoint" />
-            <mxPoint x="700" y="350" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="590" y="360" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-29" value="Get chats(without return value)/&lt;br&gt;Post chats[chats]" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="xEOuOQlPAfz4LEN3EPyu-28" connectable="0" vertex="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="95" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-32" value="ChatDataSource:&lt;br&gt;ChatDataSourceImpl&lt;br&gt;[datasource]" style="whiteSpace=wrap;html=1;rounded=1;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
-          <mxGeometry x="500" y="620" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-34" value="" style="endArrow=classic;html=1;rounded=0;labelBorderColor=none;comic=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="xEOuOQlPAfz4LEN3EPyu-16" target="xEOuOQlPAfz4LEN3EPyu-32" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="540" y="580" as="sourcePoint" />
-            <mxPoint x="640" y="580" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-35" value="Post chats[chats]" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="xEOuOQlPAfz4LEN3EPyu-34" connectable="0" vertex="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-50" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-39" value="" style="endArrow=classic;html=1;rounded=0;labelBorderColor=none;comic=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" parent="1" source="xEOuOQlPAfz4LEN3EPyu-32" target="xEOuOQlPAfz4LEN3EPyu-16" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="620" y="600" as="sourcePoint" />
-            <mxPoint x="720" y="600" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-40" value="Get chats[chats]" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="xEOuOQlPAfz4LEN3EPyu-39" connectable="0" vertex="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="50" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-41" value="Server" style="whiteSpace=wrap;html=1;rounded=1;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
-          <mxGeometry x="500" y="740" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-42" value="" style="endArrow=classic;html=1;rounded=0;labelBorderColor=none;comic=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="xEOuOQlPAfz4LEN3EPyu-32" target="xEOuOQlPAfz4LEN3EPyu-41" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="520" y="710" as="sourcePoint" />
-            <mxPoint x="620" y="710" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-43" value="Post chats[chats]" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="xEOuOQlPAfz4LEN3EPyu-42" connectable="0" vertex="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-50" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-44" value="" style="endArrow=classic;html=1;rounded=0;labelBorderColor=none;comic=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" parent="1" source="xEOuOQlPAfz4LEN3EPyu-41" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="590" y="735" as="sourcePoint" />
-            <mxPoint x="590" y="680" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-45" value="Get chats[chats]" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="xEOuOQlPAfz4LEN3EPyu-44" connectable="0" vertex="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="50" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-49" value="&lt;font style=&quot;font-size: 10px&quot;&gt;&lt;br&gt;Viewmodel notifies the change but doesn&#39;t touch view by itself, and thus viewmodel doesn&#39;t depend on view&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="210" y="320" width="170" height="90" as="geometry" />
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-51" value="Data Binding" style="text;strokeColor=none;fillColor=none;html=1;fontSize=16;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
-          <mxGeometry x="240" y="310" width="100" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-55" value="&lt;font style=&quot;font-size: 10px&quot;&gt;&amp;nbsp; Repository accesses different data sources(like remote resources and local cache) and provide them to the viewmodel, so the viewmodel doesn&#39;t have to care about the source and management of the data.&lt;br&gt;&lt;br&gt;&lt;div&gt;&lt;span&gt;&amp;nbsp; For example, repository decides where to get data from, remote or local, but doesn&#39;t know the exact method to access the resource. Repository calls DataSource, and DataSource actually access the method.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&amp;nbsp; By doing this, we can test the logic to decide where to get data from, and the actual access to servers or databases independently.&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="170" y="520" width="240" height="190" as="geometry" />
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-56" value="Repository Pattern" style="text;strokeColor=none;fillColor=none;html=1;fontSize=16;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
-          <mxGeometry x="240" y="480" width="100" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-57" value="ChatList" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;verticalAlign=top;" parent="1" vertex="1">
-          <mxGeometry x="510" y="200" width="100" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-58" value="ChatTextField" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;" parent="1" vertex="1">
-          <mxGeometry x="510" y="290" width="100" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-59" value="ChatBubble" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;" parent="1" vertex="1">
-          <mxGeometry x="520" y="230" width="80" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-60" value="MVVM+Repository" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
-          <mxGeometry x="190" y="40" width="100" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="3E0-rTflDkByDwFGI8Ox-1" value="By making the coupling between components loose, we can test the components independently, and mentenance with ease.&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="730" y="110" width="240" height="140" as="geometry" />
-        </mxCell>
-        <mxCell id="3E0-rTflDkByDwFGI8Ox-2" value="Modularity" style="text;strokeColor=none;fillColor=none;html=1;fontSize=16;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
-          <mxGeometry x="800" y="70" width="100" height="40" as="geometry" />
-        </mxCell>
-      </root>
-    </mxGraphModel>
-  </diagram>
+<mxfile host="65bd71144e">
+    <diagram name="Page-1" id="10a91c8b-09ff-31b1-d368-03940ed4cc9e">
+        <mxGraphModel dx="2352" dy="932" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-54" value="" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;" parent="1" vertex="1">
+                    <mxGeometry x="435" y="490" width="250" height="205" as="geometry"/>
+                </mxCell>
+                <mxCell id="62893188c0fa7362-1" value="MyApp" style="whiteSpace=wrap;html=1;rounded=1;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="40" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;comic=0;orthogonalLoop=1;jettySize=auto;html=1;labelBorderColor=none;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" target="62893188c0fa7362-2" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="610" y="360" as="targetPoint"/>
+                        <mxPoint x="530" y="360" as="sourcePoint"/>
+                        <Array as="points">
+                            <mxPoint x="560" y="360"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="62893188c0fa7362-2" value="&lt;span&gt;ChatPage&lt;br&gt;[view]&lt;br&gt;&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="150" width="120" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="62893188c0fa7362-5" value="" style="rounded=0;html=1;labelBackgroundColor=none;startArrow=none;startFill=0;startSize=5;endArrow=none;endFill=0;endSize=5;jettySize=auto;orthogonalLoop=1;strokeWidth=1;fontFamily=Verdana;fontSize=12" parent="1" source="62893188c0fa7362-1" target="62893188c0fa7362-2" edge="1">
+                    <mxGeometry x="-0.359" y="-11" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="62893188c0fa7362-8" value="&lt;span&gt;ChatViewModel&lt;br&gt;[viewmodel]&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="390" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-12" value="" style="endArrow=classic;html=1;rounded=0;labelBorderColor=none;comic=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" parent="1" source="62893188c0fa7362-2" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="570" y="340" as="sourcePoint"/>
+                        <mxPoint x="530" y="390" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-13" value="Watch&amp;amp;&lt;br&gt;apply changes" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="xEOuOQlPAfz4LEN3EPyu-12" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-45" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-16" value="&lt;span&gt;ChatRepository: ChatRepositoryImpl&lt;br&gt;[repository]&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="505" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-24" value="" style="endArrow=classic;html=1;rounded=0;labelBorderColor=none;comic=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" parent="1" source="xEOuOQlPAfz4LEN3EPyu-16" target="62893188c0fa7362-8" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="580" y="490" as="sourcePoint"/>
+                        <mxPoint x="680" y="490" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-25" value="Get chats[chats]" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="xEOuOQlPAfz4LEN3EPyu-24" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="50" y="2" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-26" value="" style="endArrow=classic;html=1;rounded=0;labelBorderColor=none;comic=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="62893188c0fa7362-8" target="xEOuOQlPAfz4LEN3EPyu-16" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="530" y="470" as="sourcePoint"/>
+                        <mxPoint x="630" y="470" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-27" value="Post chats[chats]" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="xEOuOQlPAfz4LEN3EPyu-26" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-50" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-28" value="" style="endArrow=classic;html=1;rounded=0;labelBorderColor=none;comic=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="62893188c0fa7362-2" target="62893188c0fa7362-8" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="600" y="350" as="sourcePoint"/>
+                        <mxPoint x="700" y="350" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="590" y="360"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-29" value="Get chats(without return value)/&lt;br&gt;Post chats[chats]" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="xEOuOQlPAfz4LEN3EPyu-28" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="95" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-32" value="ChatDataSource:&lt;br&gt;ChatDataSourceImpl&lt;br&gt;[datasource]" style="whiteSpace=wrap;html=1;rounded=1;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="620" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-34" value="" style="endArrow=classic;html=1;rounded=0;labelBorderColor=none;comic=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="xEOuOQlPAfz4LEN3EPyu-16" target="xEOuOQlPAfz4LEN3EPyu-32" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="540" y="580" as="sourcePoint"/>
+                        <mxPoint x="640" y="580" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-35" value="Post chats[chats]" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="xEOuOQlPAfz4LEN3EPyu-34" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-50" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-39" value="" style="endArrow=classic;html=1;rounded=0;labelBorderColor=none;comic=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" parent="1" source="xEOuOQlPAfz4LEN3EPyu-32" target="xEOuOQlPAfz4LEN3EPyu-16" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="620" y="600" as="sourcePoint"/>
+                        <mxPoint x="720" y="600" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-40" value="Get chats[chats]" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="xEOuOQlPAfz4LEN3EPyu-39" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="50" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-41" value="Server" style="whiteSpace=wrap;html=1;rounded=1;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="500" y="740" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-42" value="" style="endArrow=classic;html=1;rounded=0;labelBorderColor=none;comic=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="xEOuOQlPAfz4LEN3EPyu-32" target="xEOuOQlPAfz4LEN3EPyu-41" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="520" y="710" as="sourcePoint"/>
+                        <mxPoint x="620" y="710" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-43" value="Post chats[chats]" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="xEOuOQlPAfz4LEN3EPyu-42" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-50" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-44" value="" style="endArrow=classic;html=1;rounded=0;labelBorderColor=none;comic=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" parent="1" source="xEOuOQlPAfz4LEN3EPyu-41" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="590" y="735" as="sourcePoint"/>
+                        <mxPoint x="590" y="680" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-45" value="Get chats[chats]" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="xEOuOQlPAfz4LEN3EPyu-44" connectable="0" vertex="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="50" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-49" value="&lt;font style=&quot;font-size: 10px&quot;&gt;&lt;br&gt;Viewmodel notifies the change but doesn't touch view by itself, and thus viewmodel doesn't depend on view&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="210" y="320" width="170" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-51" value="Data Binding" style="text;strokeColor=none;fillColor=none;html=1;fontSize=16;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="310" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-55" value="&lt;font style=&quot;font-size: 10px&quot;&gt;&amp;nbsp; Repository accesses different data sources(like remote resources and local cache) and provide them to the viewmodel, so the viewmodel doesn't have to care about the source and management of the data.&lt;br&gt;&lt;br&gt;&lt;div&gt;&lt;span&gt;&amp;nbsp; For example, repository decides where to get data from, remote or local, but doesn't know the exact method to access the resource. Repository calls DataSource, and DataSource actually access the method.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span&gt;&amp;nbsp; By doing this, we can test the logic to decide where to get data from, and the actual access to servers or databases independently.&lt;/span&gt;&lt;/div&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="170" y="520" width="240" height="190" as="geometry"/>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-56" value="Repository Pattern" style="text;strokeColor=none;fillColor=none;html=1;fontSize=16;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="480" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-57" value="ChatList" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;verticalAlign=top;" parent="1" vertex="1">
+                    <mxGeometry x="510" y="200" width="100" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-58" value="ChatTextField" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="510" y="290" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-59" value="ChatBubble" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="230" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="xEOuOQlPAfz4LEN3EPyu-60" value="MVVM+Repository" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="190" y="40" width="100" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="3E0-rTflDkByDwFGI8Ox-1" value="By making the coupling between components loose, we can test the components independently, and maintenance with ease.&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="730" y="110" width="240" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="3E0-rTflDkByDwFGI8Ox-2" value="Modularity" style="text;strokeColor=none;fillColor=none;html=1;fontSize=16;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
+                    <mxGeometry x="800" y="70" width="100" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
 </mxfile>
