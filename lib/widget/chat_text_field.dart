@@ -1,21 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:chatapp/model/communication.dart' as comm;
 
-import 'package:chatapp/viewmodel/chat_view_model.dart';
-
-class ChatTextField extends HookConsumerWidget {
+class ChatTextField extends StatelessWidget {
   ChatTextField({Key? key}) : super(key: key);
   final TextEditingController _inputField = TextEditingController();
 
-  void _sendTextField(WidgetRef ref, String text) {
+  void _sendTextField(String text) {
     if (_inputField.text != "") {
-      ref.read(chatViewModelProvider).postChats(text);
+      comm.postPosts(text);
       _inputField.clear();
     }
   }
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return Align(
         alignment: Alignment.bottomLeft,
         child: Row(
@@ -28,11 +26,11 @@ class ChatTextField extends HookConsumerWidget {
                   border: InputBorder.none,
                   fillColor: Colors.white,
                   filled: true),
-              onSubmitted: (text) => _sendTextField(ref, text),
+              onSubmitted: _sendTextField,
             )),
             FloatingActionButton(
               onPressed: () {
-                _sendTextField(ref, _inputField.text);
+                _sendTextField(_inputField.text);
               },
               child: const Icon(Icons.send, color: Colors.white, size: 18),
               backgroundColor: Colors.blue,
