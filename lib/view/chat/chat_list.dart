@@ -10,15 +10,14 @@ class ChatList extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final chat = ref.watch(chatViewModelProvider);
 
-    return SingleChildScrollView(
-        child: ListView.builder(
-            itemCount: chat.chats.length,
-            shrinkWrap: true,
-            reverse: true,
-            padding: const EdgeInsets.only(top: 10, bottom: 55),
-            itemBuilder: (BuildContext context, index) {
-              return ChatBubble(
-                  body: chat.chats[index].body, id: chat.chats[index].userId);
-            }));
+    return ListView.builder(
+        itemCount: chat.chats.length,
+        shrinkWrap: true,
+        reverse: true,
+        padding: const EdgeInsets.only(top: 10, bottom: 55),
+        itemBuilder: (BuildContext context, index) {
+          return ChatBubble(
+              body: chat.chats[index].body, id: chat.chats[index].userId);
+        });
   }
 }
