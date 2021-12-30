@@ -11,13 +11,12 @@ class ChatPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    useFuture(useMemoized(() => ref.watch(chatViewModelProvider).getChats()));
     return Scaffold(
       appBar: AppBar(
         title: const Text("Flutter + Go Chatapp"),
       ),
-      body: Stack(
-        children: <Widget>[const ChatList(), ChatTextField()],
+      body: Column(
+        children: <Widget>[const Expanded(child: ChatList()), ChatTextField()],
       ),
       floatingActionButton: FloatingActionButton(
           onPressed: () {
