@@ -8,15 +8,18 @@ final chatViewModelProvider = ChangeNotifierProvider(
     (ref) => ChatViewModel(ref.watch(chatRepositoryProvider)));
 
 class ChatViewModel extends ChangeNotifier {
-  ChatViewModel(this._repository);
+  ChatViewModel(this._repository) {
+    _chats = _repository.chats;
+    _repository.addListener(() {
+      _chats = _repository.chats;
+    });
+  }
+
   final ChatRepository _repository;
   List _chats = [];
   List get chats => _chats;
   Future<void> getChats() async {
-    _repository
-        .getChats()
-        .then((value) => _chats = value)
-        .whenComplete(notifyListeners);
+    _repository.getChats();
   }
 
   Future<void> postChats(String body) async {
