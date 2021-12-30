@@ -1,3 +1,4 @@
+import 'package:chatapp/model/chat_model.dart';
 import 'package:flutter/foundation.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
@@ -22,7 +23,7 @@ class ChatViewModel extends ChangeNotifier {
     _repository.getChats();
   }
 
-  Future<void> postChats(String body) async {
-    _repository.postChats(body);
+  Future<void> postChats(text) async {
+    _repository.postChat(Chat(body: text, userId: 5));
   }
 }

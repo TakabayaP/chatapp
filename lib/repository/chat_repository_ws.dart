@@ -13,7 +13,9 @@ class ChatRepositoryWs extends ChangeNotifier implements ChatRepository {
     channel.stream.listen((response) {
       final json = jsonDecode(response);
       chats.add(Chat(
-          json['content'], json['user_id'], DateTime.parse(json['CreatedAt'])));
+          body: json['content'],
+          userId: json['user_id'],
+          createdAt: DateTime.parse(json['CreatedAt'])));
       print(this.chats[chats.length - 1].body);
       notifyListeners();
     });
@@ -29,14 +31,20 @@ class ChatRepositoryWs extends ChangeNotifier implements ChatRepository {
     if (response.statusCode == 200) {
       print(json.decode(utf8.decode(response.bodyBytes)));
       json.decode(utf8.decode(response.bodyBytes)).forEach((element) =>
-          chats.add(Chat(element['content'], element['user_id'],
-              DateTime.parse(element['CreatedAt']))));
+          chats.add(Chat(
+              body: element['content'],
+              userId: element['user_id'],
+              createdAt: DateTime.parse(element['CreatedAt']))));
     }
     notifyListeners();
   }
 
   @override
-  Future<void> postChats(String body) async {
-    channel.sink.add('{"content":"$body","user_id":7}');
+  Future<void> postChat(chat) async {
+    channel.sink.add('{"content":"' +
+        chat.body +
+        '","user_id":' +
+        chat.userId.toString() +
+        '}');
   }
 }
