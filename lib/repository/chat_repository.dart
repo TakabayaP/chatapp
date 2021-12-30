@@ -1,6 +1,8 @@
 import 'package:chatapp/model/chat_model.dart';
+import 'package:flutter/widgets.dart';
 
-abstract class ChatRepository {
+abstract class ChatRepository extends ChangeNotifier {
+  late List<Chat> chats;
   Future<void> postChats(String body);
-  Future<List<Chat>> getChats();
+  Future<void> getChats();
 }

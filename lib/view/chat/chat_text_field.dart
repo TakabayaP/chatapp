@@ -6,11 +6,13 @@ import 'package:chatapp/viewmodel/chat_view_model.dart';
 class ChatTextField extends HookConsumerWidget {
   ChatTextField({Key? key}) : super(key: key);
   final TextEditingController _inputField = TextEditingController();
+  final FocusNode _focusNode = FocusNode();
 
   void _sendTextField(WidgetRef ref, String text) {
     if (_inputField.text != "") {
       ref.read(chatViewModelProvider).postChats(text);
       _inputField.clear();
+      _focusNode.requestFocus();
     }
   }
 
@@ -22,6 +24,8 @@ class ChatTextField extends HookConsumerWidget {
           children: [
             Expanded(
                 child: TextField(
+              autofocus: true,
+              focusNode: _focusNode,
               controller: _inputField,
               decoration: const InputDecoration(
                   hintText: "Type message...",
