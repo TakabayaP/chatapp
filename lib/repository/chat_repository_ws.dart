@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'package:flutter/widgets.dart';
-import 'package:provider/provider.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 import 'package:http/http.dart' as http;
 
@@ -26,6 +25,7 @@ class ChatRepositoryWs extends ChangeNotifier implements ChatRepository {
   @override
   Future<void> getChats() async {
     var response = await http.get(Uri.http('127.0.0.1:8080', "/post"));
+    chats = [];
     if (response.statusCode == 200) {
       print(json.decode(utf8.decode(response.bodyBytes)));
       json.decode(utf8.decode(response.bodyBytes)).forEach((element) =>

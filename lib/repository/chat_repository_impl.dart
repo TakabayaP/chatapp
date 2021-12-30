@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'package:flutter/widgets.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:http/http.dart' as http;
 
 import 'package:chatapp/model/chat_model.dart';
