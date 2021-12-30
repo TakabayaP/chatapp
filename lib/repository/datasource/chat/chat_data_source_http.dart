@@ -9,7 +9,7 @@ class ChatDataSourceHttp implements PassiveChatDataSource {
   @override
   Future<List<Chat>> getChats() async {
     List<Chat> chats = [];
-    var response = await http.get(Uri.http('127.0.0.1:8080', "/post"));
+    var response = await http.get(Uri.http('127.0.0.1:8080', "/chat"));
     if (response.statusCode == 200) {
       print(json.decode(utf8.decode(response.bodyBytes)));
       json
