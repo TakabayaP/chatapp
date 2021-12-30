@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-12-28T10:44:49.857Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.113 Safari/537.36" etag="pAJAn2Y8ARvLZn3XqTLN" version="16.1.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-12-30T01:58:08.341Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.113 Safari/537.36" etag="QR7L3eGAr6gOcUuAqyE-" version="16.1.0" type="github">
   <diagram name="Page-1" id="10a91c8b-09ff-31b1-d368-03940ed4cc9e">
-    <mxGraphModel dx="1024" dy="1376" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+    <mxGraphModel dx="631" dy="1292" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -43,28 +43,6 @@
         </mxCell>
         <mxCell id="xEOuOQlPAfz4LEN3EPyu-16" value="&lt;span&gt;ChatRepository: ChatRepositoryImpl&lt;br&gt;[repository]&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=1;shadow=1;labelBackgroundColor=none;strokeWidth=1;fontFamily=Verdana;fontSize=12;align=center;" parent="1" vertex="1">
           <mxGeometry x="500" y="505" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-24" value="" style="endArrow=classic;html=1;rounded=0;labelBorderColor=none;comic=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" parent="1" source="xEOuOQlPAfz4LEN3EPyu-16" target="62893188c0fa7362-8" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="580" y="490" as="sourcePoint" />
-            <mxPoint x="680" y="490" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-25" value="Get chats[chats]" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="xEOuOQlPAfz4LEN3EPyu-24" connectable="0" vertex="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="50" y="2" as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-26" value="" style="endArrow=classic;html=1;rounded=0;labelBorderColor=none;comic=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="62893188c0fa7362-8" target="xEOuOQlPAfz4LEN3EPyu-16" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="530" y="470" as="sourcePoint" />
-            <mxPoint x="630" y="470" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="xEOuOQlPAfz4LEN3EPyu-27" value="Post chats[chats]" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" parent="xEOuOQlPAfz4LEN3EPyu-26" connectable="0" vertex="1">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="-50" as="offset" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="xEOuOQlPAfz4LEN3EPyu-28" value="" style="endArrow=classic;html=1;rounded=0;labelBorderColor=none;comic=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" parent="1" source="62893188c0fa7362-2" target="62893188c0fa7362-8" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -154,11 +132,55 @@
         <mxCell id="xEOuOQlPAfz4LEN3EPyu-60" value="MVVM+Repository" style="text;strokeColor=none;fillColor=none;html=1;fontSize=24;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
           <mxGeometry x="190" y="40" width="100" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="3E0-rTflDkByDwFGI8Ox-1" value="By making the coupling between components loose, we can test the components independently, and mentenance with ease.&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="3E0-rTflDkByDwFGI8Ox-1" value="By making the coupling between components loose, we can test the components independently, and maintenance with ease.&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="730" y="110" width="240" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="3E0-rTflDkByDwFGI8Ox-2" value="Modularity" style="text;strokeColor=none;fillColor=none;html=1;fontSize=16;fontStyle=1;verticalAlign=middle;align=center;" vertex="1" parent="1">
+        <mxCell id="3E0-rTflDkByDwFGI8Ox-2" value="Modularity" style="text;strokeColor=none;fillColor=none;html=1;fontSize=16;fontStyle=1;verticalAlign=middle;align=center;" parent="1" vertex="1">
           <mxGeometry x="800" y="70" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NW1lpmxRgJRaP0ZMr7IM-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;comic=0;orthogonalLoop=1;jettySize=auto;html=1;labelBorderColor=none;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="559.77" y="449.99" as="targetPoint" />
+            <mxPoint x="529.77" y="479.99" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="530" y="470" />
+              <mxPoint x="560" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NW1lpmxRgJRaP0ZMr7IM-2" value="" style="endArrow=classic;html=1;rounded=0;labelBorderColor=none;comic=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="62893188c0fa7362-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="529.77" y="445" as="sourcePoint" />
+            <mxPoint x="529.77" y="505" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NW1lpmxRgJRaP0ZMr7IM-3" value="Watch&amp;amp;&lt;br&gt;apply changes" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="NW1lpmxRgJRaP0ZMr7IM-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-50" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NW1lpmxRgJRaP0ZMr7IM-4" value="" style="endArrow=classic;html=1;rounded=0;labelBorderColor=none;comic=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="62893188c0fa7362-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="475" as="sourcePoint" />
+            <mxPoint x="589.77" y="505" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="589.77" y="475" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NW1lpmxRgJRaP0ZMr7IM-5" value="Get chats(without return value)/&lt;br&gt;Post chats[chats]" style="edgeLabel;resizable=0;html=1;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="NW1lpmxRgJRaP0ZMr7IM-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="95" y="-8" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NW1lpmxRgJRaP0ZMr7IM-8" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="62893188c0fa7362-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="760" y="420" as="sourcePoint" />
+            <mxPoint x="820" y="475" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NW1lpmxRgJRaP0ZMr7IM-9" value="another repository&lt;br&gt;(e.g. UserRepository for icons)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="770" y="405" width="180" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
