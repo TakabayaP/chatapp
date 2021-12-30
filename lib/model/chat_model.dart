@@ -9,7 +9,7 @@ class Chat {
   @JsonKey(name: 'user_id')
   final int userId;
   @JsonKey(name: 'CreatedAt')
-  late DateTime? createdAt;
+  final DateTime? createdAt;
   Chat({
     required this.body,
     required this.userId,
