@@ -3,16 +3,12 @@ import 'package:flutter/foundation.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 
 import 'package:chatapp/model/chat_model.dart';
-import 'package:chatapp/repository/datasource/chat/active_chat_datasource.dart';
+import 'package:chatapp/repository/datasource/chat/active_chat_data_source.dart';
 
 class ChatDataSourceWs extends ChangeNotifier implements ActiveChatDataSource {
   ChatDataSourceWs() {
     channel.stream.listen((event) {
-      final json = jsonDecode(event);
-      newChat = Chat(
-          body: json['content'],
-          userId: json['user_id'],
-          createdAt: DateTime.parse(json['CreatedAt']));
+      newChat = Chat.fromJson(jsonDecode(event));
       notifyListeners();
     });
   }
@@ -24,10 +20,7 @@ class ChatDataSourceWs extends ChangeNotifier implements ActiveChatDataSource {
 
   @override
   Future<void> postChat(Chat chat) async {
-    channel.sink.add('{"content":"' +
-        chat.body +
-        '","user_id":' +
-        chat.userId.toString() +
-        '}');
+    channel.sink.add(jsonEncode(chat));
+    print(jsonEncode(chat));
   }
 }

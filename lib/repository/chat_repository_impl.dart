@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 
 import 'package:chatapp/model/chat_model.dart';
 import 'package:chatapp/repository/chat_repository.dart';
-import 'package:chatapp/repository/datasource/chat/active_chat_datasource.dart';
+import 'package:chatapp/repository/datasource/chat/active_chat_data_source.dart';
 import 'package:chatapp/repository/datasource/chat/passive_chat_data_source.dart';
 
 class ChatRepositoryImpl extends ChangeNotifier implements ChatRepository {

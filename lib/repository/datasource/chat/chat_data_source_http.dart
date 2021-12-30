@@ -12,11 +12,9 @@ class ChatDataSourceHttp implements PassiveChatDataSource {
     var response = await http.get(Uri.http('127.0.0.1:8080', "/post"));
     if (response.statusCode == 200) {
       print(json.decode(utf8.decode(response.bodyBytes)));
-      json.decode(utf8.decode(response.bodyBytes)).forEach((element) =>
-          chats.add(Chat(
-              body: element['content'],
-              userId: element['user_id'],
-              createdAt: DateTime.parse(element['CreatedAt']))));
+      json
+          .decode(utf8.decode(response.bodyBytes))
+          .forEach((json) => chats.add(Chat.fromJson(json)));
     }
     return chats;
   }
@@ -24,11 +22,6 @@ class ChatDataSourceHttp implements PassiveChatDataSource {
   @override
   Future<void> postChat(Chat chat) async {
     await http.post(Uri.http('127.0.0.1:8080', '/post'),
-        headers: {"Content-Type": "application/json"},
-        body: '{"content":"' +
-            chat.body +
-            '","user_id":' +
-            chat.userId.toString() +
-            '}');
+        headers: {"Content-Type": "application/json"}, body: chat.toJson());
   }
 }
