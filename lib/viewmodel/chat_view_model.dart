@@ -1,7 +1,7 @@
-import 'package:chatapp/model/chat_model.dart';
 import 'package:flutter/foundation.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import 'package:chatapp/model/chat_model.dart';
 import 'package:chatapp/repository/chat_repository.dart';
 import 'package:chatapp/provider/chat_repository_provider.dart';
 

@@ -16,6 +16,7 @@ class ChatDataSourceWs extends ChangeNotifier implements ActiveChatDataSource {
       notifyListeners();
     });
   }
+
   @override
   late Chat newChat;
   WebSocketChannel channel =
