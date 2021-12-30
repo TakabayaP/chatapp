@@ -1,33 +1,35 @@
-import 'dart:convert';
-import 'package:flutter/widgets.dart';
-import 'package:http/http.dart' as http;
+import 'package:flutter/foundation.dart';
 
 import 'package:chatapp/model/chat_model.dart';
 import 'package:chatapp/repository/chat_repository.dart';
+import 'package:chatapp/repository/datasource/chat/active_chat_datasource.dart';
+import 'package:chatapp/repository/datasource/chat/passive_chat_data_source.dart';
 
 class ChatRepositoryImpl extends ChangeNotifier implements ChatRepository {
-  ChatRepositoryImpl();
-
-  @override
-  Future<List<Chat>> getChats() async {
-    List<Chat> chats = [];
-    var response = await http.get(Uri.http('127.0.0.1:8080', "/post"));
-    if (response.statusCode == 200) {
-      print(json.decode(utf8.decode(response.bodyBytes)));
-      json.decode(utf8.decode(response.bodyBytes)).forEach((element) =>
-          chats.add(Chat(element['content'], element['user_id'],
-              DateTime.parse(element['CreatedAt']))));
-    }
-    return chats;
+  ChatRepositoryImpl(
+      {required this.activeChatDataSource,
+      required this.passiveChatDataSource}) {
+    getChats();
+    activeChatDataSource.addListener(() {
+      chats.add(activeChatDataSource.newChat);
+      notifyListeners();
+    });
   }
 
   @override
-  Future<void> postChats(String body) async {
-    await http.post(Uri.http('127.0.0.1:8080', '/post'),
-        headers: {"Content-Type": "application/json"},
-        body: '{"content":"$body","user_id":5}');
+  List<Chat> chats = [];
+
+  final ActiveChatDataSource activeChatDataSource;
+  final PassiveChatDataSource passiveChatDataSource;
+
+  @override
+  Future<void> getChats() async {
+    chats = await passiveChatDataSource.getChats();
+    notifyListeners();
   }
 
   @override
-  late List<Chat> chats;
+  Future<void> postChat(Chat chat) async {
+    activeChatDataSource.postChat(chat);
+  }
 }
