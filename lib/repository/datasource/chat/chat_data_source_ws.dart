@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:web_socket_channel/web_socket_channel.dart';
 
 import 'package:chatapp/model/chat_model.dart';
-import 'package:chatapp/repository/datasource/chat/active_chat_datasource.dart';
+import 'package:chatapp/repository/datasource/chat/active_chat_data_source.dart';
 
 class ChatDataSourceWs extends ChangeNotifier implements ActiveChatDataSource {
   ChatDataSourceWs() {
