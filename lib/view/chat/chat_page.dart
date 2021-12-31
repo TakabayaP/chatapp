@@ -17,12 +17,6 @@ class ChatPage extends HookConsumerWidget {
       body: Column(
         children: <Widget>[const Expanded(child: ChatList()), ChatTextField()],
       ),
-      floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            ref.watch(chatViewModelProvider).getChats();
-          },
-          child: const Icon(Icons.replay_outlined)),
-      floatingActionButtonLocation: FloatingActionButtonLocation.endTop,
     );
   }
 }
