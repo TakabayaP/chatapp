@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 
 class ChatBubble extends StatelessWidget {
-  const ChatBubble({Key? key, required this.id, required this.body})
+  const ChatBubble(
+      {Key? key, required this.id, required this.body, required this.showRight})
       : super(key: key);
   final String body;
   final int id;
-
+  final bool showRight;
   @override
   Widget build(BuildContext context) {
     return Column(children: [
       Align(
-          alignment: Alignment.topLeft,
+          alignment: showRight ? Alignment.topRight : Alignment.topLeft,
           child: Container(
               padding: const EdgeInsets.all(16),
               margin: const EdgeInsets.all(10),
@@ -20,9 +21,9 @@ class ChatBubble extends StatelessWidget {
               ),
               child: Text(body))),
       Align(
-          alignment: Alignment.topLeft,
+          alignment: showRight ? Alignment.topRight : Alignment.topLeft,
           child: Container(
-              margin: const EdgeInsets.only(left: 20),
+              margin: const EdgeInsets.only(left: 20, right: 20),
               child: Text("id:" + id.toString(),
                   style: const TextStyle(
                     fontSize: 13,

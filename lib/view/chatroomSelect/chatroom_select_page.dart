@@ -9,16 +9,36 @@ class ChatroomSelect extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final chatroomSelect = ref.watch(chatroomSelectViewModelProvider);
+    final TextEditingController _inputUserId = TextEditingController();
     return Scaffold(
       appBar: AppBar(
         title: const Text("Flutter + Go Chatapp"),
       ),
       body: Center(
-        child: ElevatedButton(
-          child: const Text('Enter Chatroom'),
-          onPressed: () {
-            chatroomSelect.enterChatroom();
-          },
+        child: Column(
+          children: [
+            TextField(
+              autofocus: true,
+              controller: _inputUserId,
+              keyboardType: TextInputType.number,
+              decoration: const InputDecoration(
+                hintText: 'Input user id...',
+              ),
+            ),
+            ElevatedButton(
+              child: const Text('Enter Chatroom'),
+              onPressed: () {
+                try {
+                  int.parse(_inputUserId.text);
+                } on FormatException {
+                  print("parse error");
+                  return;
+                }
+                chatroomSelect.enterChatroom(
+                    userId: int.parse(_inputUserId.text));
+              },
+            ),
+          ],
         ),
       ),
     );

@@ -7,7 +7,7 @@ final chatroomSelectViewModelProvider =
 
 class ChatroomSelectViewModel extends ChangeNotifier {
   ChatroomSelectViewModel();
-  void enterChatroom() {
-    Get.toNamed('/chat_page');
+  void enterChatroom({required int userId}) {
+    Get.toNamed('/chat_page', arguments: {'userId': userId});
   }
 }

@@ -26,7 +26,10 @@ class ChatList extends HookConsumerWidget {
         padding: const EdgeInsets.only(top: 10, bottom: 10),
         itemBuilder: (BuildContext context, index) {
           return ChatBubble(
-              body: chat.chats[index].body, id: chat.chats[index].userId);
+            body: chat.chats[index].body,
+            id: chat.chats[index].userId,
+            showRight: chat.chats[index].userId == chat.userId,
+          );
         });
   }
 }
