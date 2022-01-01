@@ -12,9 +12,11 @@ class ChatDataSourceHttp implements PassiveChatDataSource {
     var response = await http.get(Uri.http('127.0.0.1:8080', "/chat"));
     if (response.statusCode == 200) {
       print(json.decode(utf8.decode(response.bodyBytes)));
-      json
-          .decode(utf8.decode(response.bodyBytes))
-          .forEach((json) => chats.add(Chat.fromJson(json)));
+      if (json.decode(utf8.decode(response.bodyBytes)) != null) {
+        json
+            .decode(utf8.decode(response.bodyBytes))
+            .forEach((json) => chats.add(Chat.fromJson(json)));
+      }
     }
     return chats;
   }
