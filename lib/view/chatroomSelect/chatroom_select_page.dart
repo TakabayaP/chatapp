@@ -17,7 +17,7 @@ class ChatroomSelect extends HookConsumerWidget {
       ),
       body: Column(
         children: [
-          const ChatroomList(),
+          const Expanded(child: ChatroomList()),
           TextField(
             autofocus: true,
             controller: _inputUserId,
