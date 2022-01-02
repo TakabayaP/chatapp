@@ -3,10 +3,10 @@ import 'package:get/route_manager.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:chatapp/repository/chatroom_repository.dart';
-import 'package:chatapp/repository/mock_chatroom_repository.dart';
+import 'package:chatapp/provider/chatroom_repository_provider.dart';
 
-final chatroomSelectViewModelProvider = ChangeNotifierProvider(
-    (ref) => ChatroomSelectViewModel(repository: ChatroomRepositoryImpl()));
+final chatroomSelectViewModelProvider = ChangeNotifierProvider((ref) =>
+    ChatroomSelectViewModel(repository: ref.watch(chatroomRepositoryProvider)));
 
 class ChatroomSelectViewModel extends ChangeNotifier {
   ChatroomSelectViewModel({required this.repository}) {
