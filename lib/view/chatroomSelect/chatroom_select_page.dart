@@ -35,12 +35,6 @@ class ChatroomSelect extends HookConsumerWidget {
               viewmodel.userId = int.parse(text);
             },
           ),
-          ElevatedButton(
-            child: const Text('Enter Chatroom'),
-            onPressed: () {
-              viewmodel.enterChatroom();
-            },
-          ),
         ],
       ),
     );
