@@ -14,7 +14,7 @@ class ChatroomRepositoryImpl extends ChangeNotifier
   List<Chatroom> chatrooms = [];
 
   @override
-  void getChatrooms() async {
+  Future<void> getChatrooms() async {
     chatrooms = await dataSource.getChatrooms();
     notifyListeners();
   }
