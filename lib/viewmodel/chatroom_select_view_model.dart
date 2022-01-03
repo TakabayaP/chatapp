@@ -20,4 +20,8 @@ class ChatroomSelectViewModel extends ChangeNotifier {
     Get.toNamed('/chat_page',
         arguments: {'userId': userId, 'chatroomUuid': uuid});
   }
+
+  Future<void> getChatrooms() async {
+    await repository.getChatrooms();
+  }
 }
