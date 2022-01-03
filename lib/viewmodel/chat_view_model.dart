@@ -11,19 +11,22 @@ final chatViewModelProvider = ChangeNotifierProvider(
 class ChatViewModel extends ChangeNotifier {
   ChatViewModel(this._repository) {
     _chats = _repository.chats;
-    _repository.addListener(() {
-      _chats = _repository.chats;
-    });
   }
 
   final ChatRepository _repository;
   List _chats = [];
   List get chats => _chats;
+  late int _userId;
+  int get userId => _userId;
+  void setUserId(int userId) {
+    _userId = userId;
+  }
+
   Future<void> getChats() async {
     _repository.getChats();
   }
 
   Future<void> postChats(text) async {
-    _repository.postChat(Chat(body: text, userId: 5));
+    _repository.postChat(Chat(body: text, userId: _userId));
   }
 }

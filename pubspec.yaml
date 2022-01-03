@@ -38,6 +38,7 @@ dependencies:
   web_socket_channel: ^2.1.0
   json_annotation: ^4.3.0
   build_runner: ^2.1.7
+  get:
 
 dev_dependencies:
   flutter_test:
