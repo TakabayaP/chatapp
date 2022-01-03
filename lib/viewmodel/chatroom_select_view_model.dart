@@ -14,7 +14,7 @@ class ChatroomSelectViewModel extends ChangeNotifier {
   }
   final ChatroomRepository repository;
   late int userId;
-  List _chatrooms = [];
+  late List _chatrooms;
   get chatrooms => _chatrooms;
   void enterChatroom() {
     Get.toNamed('/chat_page', arguments: {'userId': userId});

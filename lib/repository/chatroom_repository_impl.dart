@@ -6,7 +6,9 @@ import 'package:chatapp/repository/datasource/chatroom/chatroom_data_source.dart
 
 class ChatroomRepositoryImpl extends ChangeNotifier
     implements ChatroomRepository {
-  ChatroomRepositoryImpl({required this.dataSource});
+  ChatroomRepositoryImpl({required this.dataSource}) {
+    getChatrooms();
+  }
   final ChatroomDataSource dataSource;
   @override
   List<Chatroom> chatrooms = [];
