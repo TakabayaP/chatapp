@@ -17,7 +17,12 @@ class ChatroomSelect extends HookConsumerWidget {
       ),
       body: Column(
         children: [
-          const Expanded(child: ChatroomList()),
+          Expanded(
+              child: RefreshIndicator(
+                  onRefresh: () async {
+                    await viewmodel.getChatrooms();
+                  },
+                  child: ChatroomList())),
           TextField(
             autofocus: true,
             controller: _inputUserId,

@@ -11,7 +11,6 @@ class ChatroomList extends HookConsumerWidget {
 
     return ListView.builder(
         itemCount: viewmodel.chatrooms.length, //viewmodel.chatrooms.length,
-        shrinkWrap: true,
         itemBuilder: (BuildContext context, index) {
           return Card(
               child: ListTile(
