@@ -16,7 +16,8 @@ class ChatroomSelectViewModel extends ChangeNotifier {
   late int userId;
   late List _chatrooms;
   get chatrooms => _chatrooms;
-  void enterChatroom() {
-    Get.toNamed('/chat_page', arguments: {'userId': userId});
+  void enterChatroom({required uuid}) {
+    Get.toNamed('/chat_page',
+        arguments: {'userId': userId, 'chatroomUuid': uuid});
   }
 }

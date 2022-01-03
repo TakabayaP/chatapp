@@ -16,7 +16,8 @@ class ChatroomList extends HookConsumerWidget {
           return Card(
               child: ListTile(
             title: Text(viewmodel.chatrooms[index].name),
-            onTap: () => viewmodel.enterChatroom(),
+            onTap: () =>
+                viewmodel.enterChatroom(uuid: viewmodel.chatrooms[index].uuid),
           ));
         });
   }
