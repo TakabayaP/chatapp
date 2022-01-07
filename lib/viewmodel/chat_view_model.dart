@@ -18,8 +18,8 @@ class ChatViewModel extends ChangeNotifier {
   List get chats => _chats;
   late int _userId;
   int get userId => _userId;
-  void setUserId(int userId) {
-    _userId = userId;
+  void setUserId(int usersId) {
+    _userId = usersId;
   }
 
   Future<void> getChats() async {
